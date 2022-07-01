@@ -3,6 +3,7 @@
 	"displayName": "HelloWorld",
 	"description": "hello, world, created by chenyuan",
 	"version": "0.0.1",
+	"publisher": "chenyuan",
 	"engines": {
 		"vscode": "^1.68.0"
 	},
@@ -10,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-        "onCommand:helloworld.helloWorld"
+		"onStartupFinished"
 	],
 	"main": "./dist/extension.js",
 	"contributes": {
@@ -18,6 +19,10 @@
 			{
 				"command": "helloworld.helloWorld",
 				"title": "Hello World"
+			},
+			{
+				"command": "chenyuan.timenow",
+				"title": "ChenYuan Current time"
 			}
 		]
 	},

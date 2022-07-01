@@ -16,10 +16,22 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('helloworld.helloWorld', () => {
 		// The code you place here will be executed every time your command is executed
 		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from HelloWorld!');
+		vscode.window.showErrorMessage('Error: Hello VS Code');
 	});
 
-	context.subscriptions.push(disposable);
+	const customCommand = vscode.commands.registerCommand('chenyuan.timenow', () => {
+		const now = new Date()
+		vscode.window.showWarningMessage(now.toLocaleString())
+	})
+
+	const commands = [
+		disposable,
+		customCommand,
+	]
+
+	for (let command of commands) {
+		context.subscriptions.push(command);
+	}
 }
 
 // this method is called when your extension is deactivated
