@@ -2,8 +2,8 @@
   "name": "helloworld",
 	"displayName": "HelloWorld",
 	"description": "hello, world, created by chenyuan",
-	"version": "0.0.1",
-	"publisher": "chenyuan",
+	"version": "0.1.0",
+	"publisher": "ForkMain",
 	"engines": {
 		"vscode": "^1.68.0"
 	},
